@@ -1,0 +1,77 @@
+<h1>git</h1>
+<h2>git --version
+    <!-- ctrl L -> to clear the terminal -->
+    git init
+    git status
+    git add index.html 
+    git commit -m 'intro of git' 
+    git add .    #add all files in current directory 
+    git log --> show history of  commits 
+    git reset --hard  copy --> roll back one step
+
+</h2>
+
+<h1> git hub</h1>
+<h2>
+     open new repostory in git hub 
+     give repostory name 
+     create repostory
+     ..or push an existing repostory from command line
+     there will be 3 command exicute one by one in command line 
+     refresh the page repostory  is uploaded
+     
+    
+     go to command prompt and clone repostory using command : cd documents + enter 
+     + git clone  + url of the repostory
+
+     cd repostory + enter 
+    ls
+
+    if u create new file 
+    git add . 
+    git commit -m 'test' 
+    git push 
+
+
+    now go and check in github new file will be uploaded 
+    but if u go to command prompt and type ls it will not show any thing because u r still in repostory folder 
+    git pull 
+
+    pull = featch + merge
+
+     in github in new repostory now go to "setting tab"  then go  to "pages tab" now 
+     change branch none to main  and save 
+     refresh the page u will see -> your site live at some "link (vist site)"
+     with this link any one can see ur project
+</h2>
+
+<h1>branches</h1>
+<h2>
+    git branch -> u get current working branch "*main"
+git branch  <name_of_the_new_branch>    //create a new branch
+git branch test    //creating a new branch named test
+git branch         //u get list of all branches *main,test
+git checkout   <name_of_the_branch>       //to switch to that particular branch
+git checkout test         //switching to test branch
+git branch -> u get test branch as working branch "main,*test"
+write some code in test branch ->  output will be visible but changes only done in test branch 
+not on main branch 
+
+git   add . 
+git   commit -m "message for the commit"
+ still out is visible only in test branch 
+
+
+ git checkout main         //now switching back to main branch
+ //output will not be visible here because we are in main branch 
+//but our changes are still there in test branch
+git merge test            //merging the test branch into main branch
+//conflict may arise if both brnach have same code at same place
+//then resolve conflict manually or use git mergetool
+if  no conflict comes up then u will see -> Merge made by recursive.
+now main branch  has all the content of test branch
+
+<!-- git branch -d <name_of_the_branch>        //delete the given branch -->
+
+
+</h2>
